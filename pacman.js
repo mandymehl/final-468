@@ -95,7 +95,7 @@ function loadComplete(){
 		}
 	}
 	
-	output.innerHTML = 'Dots left' + dots.length;
+	output.innerHTML = 'Dots left  ' + dots.length;
 }				
 
 			
