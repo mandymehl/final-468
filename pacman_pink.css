@@ -1,0 +1,59 @@
+
+body{
+	background-color: #000000;
+}
+
+#gameWindow{
+	position: relative;
+	width: 600px;
+	height: 400px;
+	background-color: #FFFFFF;
+	overflow: hidden;
+}
+
+#pacman{
+	position: absolute;
+}
+
+.flip-horizontal{
+	-moz-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	transform: scaleX(-1);
+	-ms-filter: fliph; 	/*IE*/
+	filter: fliph; 		/*IE*/
+}
+
+.rotate90{
+	transform:rotate(90deg);
+    behavior:url(-ms-transform.htc);	/* Firefox */
+    -moz-transform:rotate(90deg);		/* Safari and Chrome */
+    -webkit-transform:rotate(90deg);	/* Opera */
+    -o-transform:rotate(90deg);			/* IE9 */
+    -ms-transform:rotate(90deg);		/* IE6,IE7 */
+}
+
+.rotate270{
+	transform:rotate(270deg);
+    behavior:url(-ms-transform.htc);
+    -moz-transform:rotate(270deg);
+    -webkit-transform:rotate(270deg);
+    -o-transform:rotate(270deg);
+    -ms-transform:rotate(270deg);
+}
+
+.wall{
+	position: absolute;
+	background-color: #FFAECE;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.dot{
+	position: absolute;
+	background-color: #FF5C9D;
+	border-radius: 10px;
+	border: 1px solid; #000000;
+	z-index: 10;
+}
