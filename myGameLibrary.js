@@ -18,16 +18,15 @@ function hittest(a, b){
 	var bX4 = bX2;
 	var bY4 = bY3;
 
-	var hit = false;
-	
-	if(aX1>bX1 && aX1<bX2 && aY1>bY1 && aY1<bY3) hit = true;
-	else if(aX2>=bX1 && aX2<=bX2 && aY2>=bY1 && aY2<=bY3) hit = true;
-	else if(aX3>=bX1 && aX3<=bX2 && aY3>=bY1 && aY3<=bY3) hit = true;
-	else if(aX4>=bX1 && aX4<=bX2 && aY4>=bY1 && aY4<=bY3) hit = true;
-	else if(bX1>=aX1 && bX1<=aX2 && bY1>=aY1 && bY1<=aY3) hit = true;
-	else if(bX2>=aX1 && bX2<=aX2 && bY2>=aY1 && bY2<=aY3) hit = true;
-	else if(bX3>=aX1 && bX3<=aX2 && bY3>=aY1 && bY3<=aY3) hit = true;
-	else if(bX4>=aX1 && bX4<=aX2 && bY4>=aY1 && bY4<=aY3) hit = true;
+	var hOverlap = true;
+	if(aX1<bX1 && aX2<bX1) hOverlap = false;
+	if(aX1>bX2 && aX2>bX2) hOverlap = false;
 
-	return hit;
+	var vOverlap = true;
+	if(aY1<bY1 && aY3<bY1) vOverlap = false;
+	if(aY1>bY3 && aY3>bY3) vOverlap = false;
+
+	if(hOverlap && vOverlap) return true;
+	else return false;
 }
+
