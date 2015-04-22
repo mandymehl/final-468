@@ -7,7 +7,7 @@ body{
 	position: relative;
 	width: 600px;
 	height: 400px;
-	background-color: #FFFFFF;
+	background-color: #5CADFF;
 	overflow: hidden;
 }
 
@@ -44,7 +44,7 @@ body{
 
 .wall{
 	position: absolute;
-	background-color: #FFAECE;
+	background-color: #254AB8;
 	-webkit-border-radius: 8px;
 	-moz-border-radius: 8px;
 	border-radius: 8px;
@@ -52,8 +52,8 @@ body{
 
 .dot{
 	position: absolute;
-	background-color: #FF5C9D;
-	border-radius: 10px;
-	border: 1px solid; #000000;
+	background-color: #FF5C5C;
+	border-radius: 0px;
+	border: 1px solid #FFFFFF;
 	z-index: 10;
 }

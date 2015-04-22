@@ -16,7 +16,7 @@ var walls = new Array();
 var dots = new Array();
 
 var PACMAN_SPEED = 10;
-var GHOST_SPEED = 5;
+// var GHOST_SPEED = 5;
 
 function loadComplete(){
 	output = document.getElementById('output');
@@ -26,29 +26,29 @@ function loadComplete(){
 	pacman.style.width = '40px';
 	pacman.style.height = '40px';
 
-	redGhost = document.getElementById('redGhost');
-	redGhost.style.left = '260px';
-	redGhost.style.top = '40px';
-	redGhost.style.width = '40px';
-	redGhost.style.height = '40px';
-
-	blueGhost = document.getElementById('blueGhost');
-	blueGhost.style.left = '300px';
-	blueGhost.style.top = '40px';
-	blueGhost.style.width = '40px';
-	blueGhost.style.height = '40px';
-
-	greenGhost = document.getElementById('greenGhost');
-	greenGhost.style.left = '220px';
-	greenGhost.style.top = '40px';
-	greenGhost.style.width = '40px';
-	greenGhost.style.height = '40px';
-
-	pinkGhost = document.getElementById('pinkGhost');
-	pinkGhost.style.left = '340px';
-	pinkGhost.style.top = '40px';
-	pinkGhost.style.width = '40px';
-	pinkGhost.style.height = '40px';
+// 	redGhost = document.getElementById('redGhost');
+// 	redGhost.style.left = '260px';
+// 	redGhost.style.top = '40px';
+// 	redGhost.style.width = '40px';
+// 	redGhost.style.height = '40px';
+// 
+// 	blueGhost = document.getElementById('blueGhost');
+// 	blueGhost.style.left = '300px';
+// 	blueGhost.style.top = '40px';
+// 	blueGhost.style.width = '40px';
+// 	blueGhost.style.height = '40px';
+// 
+// 	greenGhost = document.getElementById('greenGhost');
+// 	greenGhost.style.left = '220px';
+// 	greenGhost.style.top = '40px';
+// 	greenGhost.style.width = '40px';
+// 	greenGhost.style.height = '40px';
+// 
+// 	pinkGhost = document.getElementById('pinkGhost');
+// 	pinkGhost.style.left = '340px';
+// 	pinkGhost.style.top = '40px';
+// 	pinkGhost.style.width = '40px';
+// 	pinkGhost.style.height = '40px';
 
 	loopTimer = setInterval(loop, 50);
 
@@ -69,15 +69,15 @@ function loadComplete(){
 	createWall(320, 80, 40, 80);
 
 	// top wall
-	createWall(-20, 0, 640, 40);
+// 	createWall(-20, 0, 640, 40);
 	// left side walls
-	createWall(0, 0, 40, 160);
-	createWall(0, 200, 40, 200);
+	createWall(0, -7, 40, 160);
+	createWall(0, 210, 40, 200);
 	// right side walls
-	createWall(560, 0, 40, 160);
-	createWall(560, 200, 40, 200);
+	createWall(560, -7, 40, 160);
+	createWall(560, 210, 40, 200);
 	// top wall
-	createWall(-20, 360, 640, 40);
+// 	createWall(-20, 360, 640, 40);
 	
 	for(var row=0; row<10; row++){
 		for(var col=0; col<15; col++){
