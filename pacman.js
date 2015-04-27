@@ -1,4 +1,3 @@
-
 var output;
 var pacman;
 
@@ -69,7 +68,7 @@ function loadComplete(){
 	createWall(320, 80, 40, 80);
 
 	// top wall
-// 	createWall(-20, 0, 640, 40);
+// createWall(-20, 0, 640, 40);
 	// left side walls
 	createWall(0, -7, 40, 160);
 	createWall(0, 210, 40, 200);
@@ -77,7 +76,7 @@ function loadComplete(){
 	createWall(560, -7, 40, 160);
 	createWall(560, 210, 40, 200);
 	// top wall
-// 	createWall(-20, 360, 640, 40);
+// createWall(-20, 360, 640, 40);
 	
 	for(var row=0; row<10; row++){
 		for(var col=0; col<15; col++){
@@ -143,6 +142,16 @@ function loop(){
 		pacman.style.left = originalLeft;
 		pacman.style.top = originalTop;
 	}
+
+	// // Move the walls
+	// for (var i=0; i < walls.length; i++){ 
+	// 	var	y = parseInt(walls[i].style.top) + PACMAN_SPEED;
+	// 	if( y > GS_HEIGHT ){
+	// 		walls[i].style.top = y - 400 + 'px';
+	
+	// 	}
+	// 	else walls[i].style.top = y + 'px';
+	// }
 	
 	for(var i=0; i<dots.length; i++){
 		if( hittest(dots[i], pacman) ) {
