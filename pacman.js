@@ -14,6 +14,8 @@ var direction = 'right';
 var walls = new Array();
 var dots = new Array();
 
+var bars = new Array();
+
 var PACMAN_SPEED = 10;
 // var GHOST_SPEED = 5;
 
