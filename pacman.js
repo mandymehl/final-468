@@ -23,9 +23,9 @@ function loadComplete(){
 	output = document.getElementById('output');
 	
 	var sndMusic = document.getElementById('sndMusic');
-// 	sndMusic.volume = 0.5;
-// 	sndMusic.loop = true;
-// 	sndMusic.play();
+	sndMusic.volume = 0.5;
+	sndMusic.loop = true;
+	sndMusic.play();
 	
 	pacman = document.getElementById('pacman');
 	pacman.style.left = '280px';
