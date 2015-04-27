@@ -21,6 +21,12 @@ var PACMAN_SPEED = 10;
 
 function loadComplete(){
 	output = document.getElementById('output');
+	
+	var sndMusic = document.getElementById('sndMusic');
+// 	sndMusic.volume = 0.5;
+// 	sndMusic.loop = true;
+// 	sndMusic.play();
+	
 	pacman = document.getElementById('pacman');
 	pacman.style.left = '280px';
 	pacman.style.top = '240px';
@@ -94,6 +100,7 @@ function loadComplete(){
 				dots.push(dot);
 			}
 		}
+		
 	}
 	
 // 	output.innerHTML = 'Dots left' + dots.length;
@@ -110,9 +117,12 @@ function createWall(left, top, width, height){
 	gameWindow.appendChild(wall);
 
 	walls.push(wall);	
+		
+	
 }
 
 function loop(){
+
 	numLoops++;
 	tryToChangeDirection();
 
