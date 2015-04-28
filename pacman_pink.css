@@ -1,4 +1,23 @@
+#titleScreen{
+	position: absolute;
+	width: 600px;
+	height: 400px;
 
+
+}
+#bg, #title{
+	position: absolute;
+
+
+}
+#bg{
+	z-index: 1;
+	
+	
+}
+#title{
+	z-index: 2;
+}
 body{
 	background-color: #000000;
 }
@@ -9,7 +28,8 @@ body{
 	margin-right: auto;
 	width: 600px;
 	height: 400px;
-	background-color: #5CADFF;
+	background-color: black;
+
 	overflow: hidden;
 }
 

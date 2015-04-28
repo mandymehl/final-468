@@ -1,5 +1,9 @@
+
 var output;
 var pacman;
+var bg; 
+var title; 
+// var titleScreen; 
 
 var loopTimer;
 var numLoops = 0;
@@ -19,7 +23,31 @@ var bars = new Array();
 var PACMAN_SPEED = 10;
 // var GHOST_SPEED = 5;
 
+function myalert(){alert('myalert works.')}
+
+function titleScreen(){
+	alert('ok it runs');
+	// bg = $('#bg');
+	// title = $('#title');	
+	$('#bg').css('visibility','hidden');
+	$('#bg').fadeTo('fast', .5);
+	// bg = document.getElementById('bg');
+	// title = document.getElementById('title');
+	$('#gameWindow').hide();
+	
+}
+
+
+
 function loadComplete(){
+	
+	$('#titleScreen').hide();
+	$('#gameWindow').show();
+
+	
+	
+	$('#gameWindow').css('background-color','#5CADFF');
+
 	output = document.getElementById('output');
 	
 	var sndMusic = document.getElementById('sndMusic');
