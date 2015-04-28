@@ -27,6 +27,7 @@ function myalert(){alert('myalert works.')}
 
 function titleScreen(){
 	alert('ok it runs');
+	$('#pacman').hide();
 	// bg = $('#bg');
 	// title = $('#title');	
 	$('#bg').css('visibility','hidden');
@@ -34,6 +35,7 @@ function titleScreen(){
 	// bg = document.getElementById('bg');
 	// title = document.getElementById('title');
 	$('#gameWindow').hide();
+
 	
 }
 
@@ -43,6 +45,7 @@ function loadComplete(){
 	
 	$('#titleScreen').hide();
 	$('#gameWindow').show();
+	$('#pacman').show();
 
 	
 	
