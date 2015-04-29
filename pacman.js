@@ -26,18 +26,26 @@ var PACMAN_SPEED = 10;
 function myalert(){alert('myalert works.')}
 
 function titleScreen(){
-	
-
 	// bg = $('#bg');
 	// title = $('#title');	
+	$('#bg').fadeTo(300, 1);
+	// setTimeout(function(){my_fadein}; 6000);
 	
-	$('#bg').fadeTo(5000, 1);
+	
+	
+}
+
+
+function my_fadein(){
+	
+}
+	
 	// bg = document.getElementById('bg');
 	// title = document.getElementById('title');
 
 
 	
-}
+
 
 
 
