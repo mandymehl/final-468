@@ -7,10 +7,10 @@
 		<script language="javascript" type="text/javascript" src="myGameLibrary.js"></script>
 		<script language="javascript" type="text/javascript" src="pacman.js"></script>
 	</head>
-	<body>
-		<div id="gameWindow">
+	<body onload="titleScreen()">
+		<div id="gameWindow"  onclick="loadComplete()">
 
-			<div id="titleScreen" onload="titleScreen()" onclick="loadComplete()">
+			<div id="titleScreen">
 				<img id="bg" src="images/bg1.gif">
 				<img id="title" src="images/title_scrn.gif">
 			</div>

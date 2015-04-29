@@ -26,15 +26,15 @@ var PACMAN_SPEED = 10;
 function myalert(){alert('myalert works.')}
 
 function titleScreen(){
-	alert('ok it runs');
-	$('#pacman').hide();
+	
+
 	// bg = $('#bg');
 	// title = $('#title');	
-	$('#bg').css('visibility','hidden');
-	$('#bg').fadeTo('fast', .5);
+	
+	$('#bg').fadeTo(5000, 1);
 	// bg = document.getElementById('bg');
 	// title = document.getElementById('title');
-	$('#gameWindow').hide();
+
 
 	
 }
@@ -198,7 +198,9 @@ function loop(){
 	
 	for(var i=0; i<dots.length; i++){
 		if( hittest(dots[i], pacman) ) {
-			dots[i].style.display = 'none';
+			// dots[i].style.display = 'none';
+			dots[i].style.visibility = 'hidden';
+			console.log(dots);
 		}
 	}				
 
