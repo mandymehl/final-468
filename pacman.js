@@ -28,20 +28,13 @@ function myalert(){alert('myalert works.')}
 function titleScreen(){
 	// bg = $('#bg');
 	// title = $('#title');	
-	$('#bg').fadeTo(300, 1);
-	// setTimeout(function(){my_fadein}; 6000);
+	setTimeout(function(){
+		$('#bg').fadeTo(300, 1);
+	}, 3000);
 	
 	
 	
 }
-
-
-function my_fadein(){
-	
-}
-	
-	// bg = document.getElementById('bg');
-	// title = document.getElementById('title');
 
 
 	
