@@ -3,6 +3,7 @@ var output;
 var pacman;
 var bg; 
 var title; 
+var dot;
 // var titleScreen; 
 
 var loopTimer;
@@ -15,8 +16,12 @@ var rightArrowDown = false;
 
 var direction = 'right';
 
+// var lifebar; 
+// var numLives = 0;
+
 var walls = new Array();
 var dots = new Array();
+var square;
 
 var bars = new Array();
 
@@ -42,10 +47,18 @@ function my_fadein(){
 	
 	// bg = document.getElementById('bg');
 	// title = document.getElementById('title');
+<<<<<<< Updated upstream
 
 
 	
+<<<<<<< HEAD
 
+=======
+=======
+	$('#gameWindow').hide();	
+>>>>>>> Stashed changes
+}
+>>>>>>> origin/master
 
 
 
@@ -54,10 +67,11 @@ function loadComplete(){
 	$('#titleScreen').hide();
 	$('#gameWindow').show();
 	$('#pacman').show();
-
-	
 	
 	$('#gameWindow').css('background-color','#5CADFF');
+
+	// lifebar = document.getElementById('lifebar');
+	// for(var i=0; i<3; i++) addLife();
 
 	output = document.getElementById('output');
 	
@@ -115,7 +129,7 @@ function loadComplete(){
 	createWall(320, 80, 40, 80);
 
 	// top wall
-// createWall(-20, 0, 640, 40);
+	// createWall(-20, 0, 640, 40);
 	// left side walls
 	createWall(0, -7, 40, 160);
 	createWall(0, 210, 40, 200);
@@ -123,7 +137,9 @@ function loadComplete(){
 	createWall(560, -7, 40, 160);
 	createWall(560, 210, 40, 200);
 	// top wall
-// createWall(-20, 360, 640, 40);
+	// createWall(-20, 360, 640, 40);
+
+	// the squares
 	
 	for(var row=0; row<10; row++){
 		for(var col=0; col<15; col++){
@@ -138,11 +154,8 @@ function loadComplete(){
 				gameWindow.appendChild(dot);
 				dots.push(dot);
 			}
-		}
-		
+		}	
 	}
-	
-// 	output.innerHTML = 'Dots left' + dots.length;
 }				
 
 			
@@ -155,13 +168,13 @@ function createWall(left, top, width, height){
 	wall.style.height = height + 'px';
 	gameWindow.appendChild(wall);
 
-	walls.push(wall);	
-		
-	
+	walls.push(wall);		
 }
 
 function loop(){
 
+	output.innerHTML = 'Squares left ' + dots.length;
+ 	// console.log(dots)
 	numLoops++;
 	tryToChangeDirection();
 
@@ -188,29 +201,24 @@ function loop(){
 		if(pacmanX > 590) pacmanX = -30;
 		pacman.style.left = pacmanX + 'px';
 	}
-
 	if( hitWall(pacman) ){
 		pacman.style.left = originalLeft;
 		pacman.style.top = originalTop;
 	}
-
-	// // Move the walls
-	// for (var i=0; i < walls.length; i++){ 
-	// 	var	y = parseInt(walls[i].style.top) + PACMAN_SPEED;
-	// 	if( y > GS_HEIGHT ){
-	// 		walls[i].style.top = y - 400 + 'px';
-	
-	// 	}
-	// 	else walls[i].style.top = y + 'px';
-	// }
-	
+			
 	for(var i=0; i<dots.length; i++){
 		if( hittest(dots[i], pacman) ) {
+<<<<<<< Updated upstream
 			// dots[i].style.display = 'none';
 			dots[i].style.visibility = 'hidden';
 			console.log(dots);
+=======
+			dots[i].style.display = 'none';
+			dots.splice(i, 1);
+
+>>>>>>> Stashed changes
 		}
-	}				
+	}	
 
 }
 
